@@ -49,6 +49,7 @@
       left: 0px;
       right: 0px;
       z-index: 3;
+      user-select: none;
     }
 
     #music-card-info-artist {
@@ -60,9 +61,13 @@
       font-size: 7pt;
     }
 
-    #music-card-info-song {
-      font-size: 16pt;
-      margin-top: 10px;
+    #music-card-info-title {
+      font-size: 15pt;
+      margin-top: 8px;
+      padding: 5px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   </style>
 </head>
@@ -73,7 +78,8 @@
     <div id="music-card-info">
       <div id="music-card-info-artist">David Bowie</div>
       <div id="music-card-info-album">Aladdin Sane</div>
-      <div id="music-card-info-title">Watch That Man</div>
+      <div id="music-card-info-title">Let's Spend the Night Together Let's Spend the Night Together Let's Spend the
+        Night Together Let's Spend the Night Together Let's Spend the Night Together</div>
     </div>
   </div>
 </body>
