@@ -10,6 +10,7 @@
   <style>
     body {
       text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     #music-card {
@@ -22,17 +23,58 @@
       border-radius: 10px;
       box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
       transition: box-shadow .3s;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
     }
 
     #music-card:hover {
       box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    #music-card-overlay {
+      background-image: linear-gradient(0deg, black 0%, transparent 40%);
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      z-index: 2;
+    }
+
+    #music-card-info {
+      color: white;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      z-index: 3;
+    }
+
+    #music-card-info-artist {
+      font-size: 12pt;
+      font-weight: bold;
+    }
+
+    #music-card-info-album {
+      font-size: 7pt;
+    }
+
+    #music-card-info-song {
+      font-size: 16pt;
+      margin-top: 10px;
     }
   </style>
 </head>
 
 <body>
   <div id="music-card">
-    <!-- Here we will put the title, the album, etc. -->
+    <div id="music-card-overlay"></div>
+    <div id="music-card-info">
+      <div id="music-card-info-artist">David Bowie</div>
+      <div id="music-card-info-album">Aladdin Sane</div>
+      <div id="music-card-info-title">Watch That Man</div>
+    </div>
   </div>
 </body>
 
