@@ -50,6 +50,13 @@
       right: 0px;
       z-index: 3;
       user-select: none;
+      transform: translateX(0px);
+      transition: transform .3s;
+      transition-timing-function: ease-in;
+    }
+
+    #music-card:hover #music-card-info {
+      transform: translateX(300px);
     }
 
     #music-card-info-artist {
@@ -80,6 +87,13 @@
       z-index: 4;
       border-radius: 50%;
       cursor: pointer;
+      transform: translateX(-60px);
+      transition: transform .3s;
+      transition-timing-function: ease-in;
+    }
+
+    #music-card:hover #music-card-play {
+      transform: translateX(0px);
     }
 
     #music-card-triangle {
